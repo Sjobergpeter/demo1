@@ -1,0 +1,8 @@
+print ("ange tal")
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+e = int(input())
+maximum = max(a, b, c, d, e)
+print ("Det största talet är", maximum)
