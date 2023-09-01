@@ -1,2 +1,3 @@
-number = float(input("mata in ett tal"))
-print (number//3)
+v = 1.2 % 1
+
+print (v)
