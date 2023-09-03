@@ -5,6 +5,8 @@ Vegankorv2 = int(input("Hur många elever vill ha 2 veganska korvar? :"))
 Vegankorv3 = int(input("Hur många elever vill ha 3 veganska korvar? :"))
 Dryck = int(input("Hur många elever vill ha dryck?: "))
 
+packagePrice = 34.95
+
 Antalvanligkorv = math.ceil(((Vanligkorv2 * 2) + (Vanligkorv3 * 3)) / 8)
 Antalvegankorv = math.ceil(((Vegankorv2 * 2 ) + (Vegankorv3 *3)) / 4)
 print ("Korvkollen 1.0.1:")
@@ -19,8 +21,10 @@ print ("Vanlig korv:", (Antalvanligkorv), "Förpackningar")
 print ("Vegansk korv:", (Antalvegankorv), "Förpackningar")
 print ("Dryck:", (Dryck), "drickor")
 print ("-----------------------------------")
-print ((20.95 * (Antalvanligkorv)) + (34.95 *(Antalvegankorv)) + (13.95 * (Dryck)), "SEK"  )
+totalaKorvpriset = packagePrice * (Antalvegankorv)
+
+print ((20.95 * (Antalvanligkorv)) + totalaKorvpriset + (13.95 * (Dryck)), "SEK"  )
 print ("-----------------------------------")
-pris = float(20.95 * (Antalvanligkorv)) + (34.95 *(Antalvegankorv)) + (13.95 * (Dryck))
+pris = float(20.95 * (Antalvanligkorv)) + (packagePrice *(Antalvegankorv)) + (13.95 * (Dryck))
 pris = int(pris)
 print (pris)

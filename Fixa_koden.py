@@ -1,4 +1,7 @@
-total = 0
-for counter in range(100):
-    total += 10
-    print(total)
+while True:
+    color = input("Enter a color: ")
+    if color == "red":
+        break
+    else:
+        print("Cool color!")
+print("I don't like red")
