@@ -1,12 +1,23 @@
 print (".:MATHLETE V2.0:.")
 print ("-----------------")
-sum = 0
-antal = 0
+total = 0
+count = 0
+
 while True:
     try:
-        user_input = int(input(">"))
+        user_input = (input(">"))
+        if user_input.lower() == "exit":
+            break
+        number = int(user_input)
+        total += number
+        count += 1
 
-        break
     except ValueError:
-        print("NEJ")
-        continue
+        print("FEL: Ogiltigt nummer!")
+        print("Skriv \"exit\" för att avsluta!")
+        continue    
+
+print ("-----------------")
+print ("Kardinalitet:", count)
+print ("Summa:       ", total)
+print ("Medelvärde   ", (total / count))
