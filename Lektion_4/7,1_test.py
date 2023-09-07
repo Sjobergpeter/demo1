@@ -38,7 +38,7 @@ while True:
 
     elif kommando == 'e':
         print('Programmet stängs.')
-        break  # Avsluta programmet om användaren väljer att stänga det
+        break  # Avslutar programmet om användaren väljer att stänga det
 
     # [X] 5. Pausa exekvering
     input('Tryck enter för att fortsätta ...')

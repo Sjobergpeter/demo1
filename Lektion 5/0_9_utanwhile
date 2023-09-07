@@ -1,0 +1,12 @@
+nummer = ["1", "2", "3", "4", "5", "6", "7", "8", "9",]
+for sek in nummer:
+    print (sek)
+
+for i in range (10):
+    print (i)
+
+till_9 = list(range(10))
+for tal in till_9:
+    print(tal)
+
+    
