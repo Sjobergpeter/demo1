@@ -9,6 +9,7 @@ anteckningar = {
 }
 
 while True:
+    os.system("cls" if os.name == "nt" else "clear")
     try:
         with open ("anteckningar.json", "r") as myfile:
             anteckningar = myfile.read()
@@ -35,21 +36,23 @@ while True:
 
     if user_input == "view":
         user_input = input("Vilken anteckning vill du läsa? > ")
-        try:
-            notes[(user_input)]
-            print (notes[(user_input)])
-            input("Tryck enter för att fortsätta")
-            continue
-    
-        except KeyError:
-            print (f"FEL: anteckningen '{(user_input)}' Finns inte")
+        if not user_input in notes:
+            print(f"'{(user_input)}' finns inte i anteckningar!")
             input("Tryck 'ENTER' för att fortsätta")
             continue
+        
+        notes[(user_input)]
+        print (notes[(user_input)])
+        input("Tryck enter för att fortsätta")
+        continue
+    
     
 
     elif user_input == "add":
         print ("Lägg till artikel:")
         titel = input(" titel > ")
+        if titel in notes:
+            print(f"'{(titel)}")
         text = input(" text > ")
         notes[titel] = text 
 
@@ -77,6 +80,8 @@ while True:
     
 
     elif user_input == "exit":
-        
+        break
+
     
-    break
+    else:
+        input("Felakting inmatning, tryck 'ENTER' för att fortsätta")
