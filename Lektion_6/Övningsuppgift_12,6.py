@@ -1,7 +1,9 @@
 import json
 import os
 
+#en variabel för att ta emot och ersätta json filen till python text
 notes = ""
+#Skapar en anteckningar för grund fil till Json om det inte finns en i grundmappen
 anteckningar = {
     "Meddelande från skolan": "Friluftsdag på tisdag",
     "Kom ihåg!": "Ta bilen till verkstad",
@@ -9,12 +11,15 @@ anteckningar = {
 }
 
 while True:
+    #Rensar terminalen
     os.system("cls" if os.name == "nt" else "clear")
+    #hämtar json filen för att lägga in i variabeln notes
     try:
         with open ("anteckningar.json", "r") as myfile:
             anteckningar = myfile.read()
             notes = json.loads(anteckningar)
     
+    #Här skapar jag json filen om den inte finns
     except FileNotFoundError:
         print ("finns inte, skapar filen")
         with open ("anteckningar.json", "x+") as myfile:
@@ -48,11 +53,13 @@ while True:
     
     
 
-    elif user_input == "add":
+    elif user_input.lower() == "add".lower():
         print ("Lägg till artikel:")
         titel = input(" titel > ")
         if titel in notes:
-            print(f"'{(titel)}")
+            print(f"'{(titel)}' Finns redan i anteckningar")
+            input("Tryck 'ENTER' för att fortsätta")
+            continue
         text = input(" text > ")
         notes[titel] = text 
 
@@ -61,7 +68,7 @@ while True:
             input("Anteckning tillagd.")
             input("Tryck 'ENTER' för att fortsätta")
 
-    elif user_input == "rm":
+    elif user_input.lower() == "rm".lower():
         user_input = input("Vilken anteckning vill du ta bort? > ")
         if user_input in notes:
             del notes[(user_input)]
@@ -79,7 +86,7 @@ while True:
             continue
     
 
-    elif user_input == "exit":
+    elif user_input.lower() == "exit".lower():
         break
 
     
