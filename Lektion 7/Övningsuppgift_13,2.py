@@ -26,4 +26,3 @@ Vasteras
     input(".")
 
 
-#{'city': 'stockholm', 'forecasts': [{'date': '14 September', 'forecast': 'rainy'}, {'date': '15 September', 'forecast': 'sunny'}, {'date': '16 September', 'forecast': 'clear'}, {'date': '17 September', 'forecast': 'sunny'}, {'date': '18 September', 'forecast': 'clear'}]}
