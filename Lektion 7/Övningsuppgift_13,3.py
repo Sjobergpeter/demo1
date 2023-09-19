@@ -22,6 +22,7 @@ while True:
     
     print ("----------------")
     artist = input("Select artist: ")
+    artist = artist.title()
 
     if artist in new_dict:
         artist_id = new_dict.get(artist)
