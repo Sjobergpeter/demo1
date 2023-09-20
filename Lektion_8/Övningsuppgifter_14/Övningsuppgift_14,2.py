@@ -1,10 +1,11 @@
 import ui
 ui.line()
-ui.header ('EXEMPEL ')
+ui.header ('EXEMPEL153345')
 ui.line (True)
 ui.echo ('Detta är ett exempel på hur ')
 ui.echo ('ett gränssnitt kan se ut.')
 ui.line ()
+ui.line()
 ui.header ('.. vad vill du göra?')
 ui.line ()
 ui.echo ('A | Visa inköpslista ')
